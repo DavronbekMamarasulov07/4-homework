@@ -12,13 +12,12 @@ btn.addEventListener("click" , () => {
 menuList.forEach(item => {
     item.addEventListener("click", () => {
         menuList.forEach(item => {
-            item.style.borderLeft = "4px solid transparent"
+            item.style.borderLeft = "2px solid transparent"
             item.style.color = "#ffffff80"
         
         })
-        item.style.borderLeft = "4px solid #fff"
+        item.style.borderLeft = "2px solid #fff"
         item.style.color = "#fff"
-        console.log("salom");
     })
 })
 
