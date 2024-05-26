@@ -93,7 +93,7 @@ localStorage.setItem("products" ,JSON.stringify(products))
 
 
 
-function renderUsers (){
+function renderProducts (){
     while(tableBody.firstChild){
         tableBody.removeChild(tableBody.firstChild)
     }
@@ -113,8 +113,8 @@ function renderUsers (){
     
                 tr.innerHTML += `
                     <td class="button-wrapper">
-                        <button data-product-id="${products.id}" class="done-btn"> Done </button>
-                        <button data-product-id="${products.id}" class="delete-btn"> Delete </button>
+                        <button data-product-id="${product.id}" class="done-btn"> Done </button>
+                        <button data-product-id="${product.id}" class="delete-btn"> Delete </button>
                     </td>
                     `
                 tableBody.append(tr)
@@ -126,7 +126,7 @@ function renderUsers (){
     }
     
 
-renderUsers()
+renderProducts()
 
 
 
@@ -138,7 +138,7 @@ tableBody.addEventListener("click" , (e) => {
                 let indexOfDeleteElement = products.findIndex(products => products.id == id);
                 products.splice(indexOfDeleteElement,1)
                 localStorage.setItem("products", JSON.stringify(products))
-                renderUsers()
+                renderProducts()
                 alert("O'chirildi!")
             }
             else{
@@ -148,7 +148,7 @@ tableBody.addEventListener("click" , (e) => {
         if (e.target.classList.contains("done-btn")){
             let id = e.target.dataset.productId;
             let indexOfDeleteElement = products.findIndex(products => products.id == id);
-            products.splice(indexOfDeleteElement, 1)
+            // products.splice(indexOfDeleteElement, 1)
             
             
         }
