@@ -396,12 +396,13 @@ body {
 // hero section
 
 .hero-wrapper {
+  display: flex;
   margin-top: 50px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 50px;
-  display: none;
+//   display: none;
 }
   
 
