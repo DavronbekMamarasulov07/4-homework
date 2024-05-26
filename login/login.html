@@ -19,7 +19,10 @@
                     <label class="form-label">Username</label>
                     <input id="form-username" class="form-input" type="text" required>
                     <label class="form-label">Password</label>
-                    <input id="form-password" class="form-input" type="password" required>
+                    <label class="password-item">
+                        <input id="form-password" class="password-input login-password form-input" type="password" required>
+                        <i class="bi bi-eye-slash"></i>
+                    </label>
                     <button id="submit-btn" class="submit-btn" type="submit">Submit</button>
                     <h3  class="login-text">Not a member? <a id="signup-btn" href="#">Signup now</a></h3>
                 </form>
@@ -28,12 +31,16 @@
                         <h1 class="signup-title login-title">Sign Up</h1>
                         <i id="cancel-btn" class="bi bi-x"></i>
                     </div>
-                    <label class="signup form-label">Username</label>
+                    <label class="signup form-label"> new Username</label>
                     <input id="signup-username"  class="signup form-input" type="text" required>
-                    <label class="signup form-label">Email</label>
+
+                    <label class="signup form-label">New Password</label>
+                    <label class="password-item">
+                     <input id="signup-password" class="password-input signup-password  form-input" type="password" required>
+                     <i class="abi bi-eye-slash"></i>
+                    </label>
+                    <label class="signup form-label">New Email</label>
                     <input id="signup-email" class="signup form-input" type="email" required > 
-                    <label class="signup form-label">Password</label>
-                    <input id="signup-password" class="signup form-input" type="password" required>
                     <button class="signup submit-btn" type="submit">Submit</button>
                 </form>
             </div>

@@ -7,6 +7,9 @@ const formPasswordInput = document.querySelector("#form-password");
 const signupUsernameInput = document.querySelector("#signup-username");
 const signupEmailInput = document.querySelector("#signup-email");
 const signupPasswordInput = document.querySelector("#signup-password");
+const passwordEye = document.querySelector(".bi-eye-slash");
+const passwordInput = document.querySelector(".password-input"); 
+
 
 const showSignupPage = function() {
     signupForm.classList.add("show");
@@ -22,7 +25,7 @@ const showFormPage = function() {
     loginForm.classList.remove("hide");
 };
 
-function NewAdd(u , p , e) {
+function NewAdd(u , p, e ) {
     this.username = u;
     this.email = e
     this.password = p;
@@ -49,6 +52,8 @@ const submitLoginForm = function(event) {
     loginForm.reset();
 };
 
+
+
 const submitSignupForm = function(event) {
     event.preventDefault();
 
@@ -68,7 +73,21 @@ const submitSignupForm = function(event) {
 
 
 
+const showPassword = function() {
+    if (passwordInput.type === 'password' ) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+};
+
+
+
+
+passwordEye.addEventListener('click', showPassword)
 signupForm.addEventListener("submit", submitSignupForm);
 loginForm.addEventListener("submit", submitLoginForm);
 cancelBtn.addEventListener("click", showFormPage);
 signupBtn.addEventListener("click", showSignupPage);
+
+
